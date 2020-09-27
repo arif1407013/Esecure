@@ -1,0 +1,35 @@
+<div class="navBar">
+    <button class="address" routerLink="/home">Go to Home</button>
+    <div>Welcome to chat app</div>
+    <button class="address" (click)="logOut()">logout</button>
+</div>
+<div class="mainCon">
+    <mat-accordion class="contentS">
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header class="headPA">
+                <mat-panel-title>
+                    Here are all the chats
+                </mat-panel-title>
+                <mat-panel-description>
+                    click
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div class="textBl" *ngFor="let ch of listChat">
+                <div [ngClass]="(sessName == ch.Owner)?'rightyY':'leftyY'">
+                    <p class="messG">{{ch.Message}}</p>
+                    <p class="addiT">{{ch.Owner}}</p>
+                    <p class="addiT">{{ch.Time}}</p>
+                </div>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <div class="forForm">
+        <form (submit)="addChat()" class="formss">
+            <mat-form-field class="forInp" appearance="fill">
+                <mat-label>Find your voice</mat-label>
+                <textarea matInput [(ngModel)]="inpFor" name="ngModel" rows="2"></textarea>
+            </mat-form-field>
+            <button class="forBut" mat-flat-button type="submit">POST</button>
+        </form>
+    </div>
+</div>

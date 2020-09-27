@@ -1,0 +1,88 @@
+[class *= 'mainCon']{
+    width: 100%;
+    height: 620px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+[class *= 'forForm']{
+    width: 100%;
+    height: 20%;
+    display: block;
+    flex-flow: column wrap;
+}
+[class *= 'formss']{
+    float: left;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+[class *= 'forInp']{
+    width: 100%;
+    height: auto;
+    align-self: stretch;
+}
+[class *= 'forBut']{
+    align-self: flex-start;
+    width: 25%;
+    background-color: brown;
+    color: cornsilk;
+    margin-left: 1%;
+}
+[class *= 'textAR']{
+    align-self: stretch;
+}
+[class *= 'contentS']{
+    width: 100%;
+    height: 80%;
+    overflow: auto;
+    display: block;
+}
+[class *= 'headPA']{
+    background-color: crimson;
+}
+[class *= 'textBl']{
+    width: 100%;
+    height: auto;
+    float: left;
+    margin: 1%;
+    clear: both;
+    font-family: Arial, Helvetica, sans-serif;
+}
+[class *= 'rightyY']{
+    width: auto;
+    float: right;
+}
+[class *= 'leftyY']{
+    width: auto;
+    float: left;
+}
+[class *= 'messG']{
+    font-size: 20px;
+    font-weight: bold;
+}
+[class *= 'addiT']{
+    font-size: 10px;
+    font-weight: bolder;
+}
+[class *= 'navBar']{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    height: 40px;
+    text-align: center;
+    font-size: 30px;
+    align-items: center;
+}
+[class *= 'address']{
+    height: 100%;
+    width: 30%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    border: none;
+}
