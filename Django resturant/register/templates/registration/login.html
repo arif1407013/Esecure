@@ -1,0 +1,15 @@
+{% extends 'register/base.html' %}
+{% block title %}
+	LOG IN
+{% endblock %}
+{% block head %}
+	<h1>Please Log IN</h1>
+{% endblock %}
+{% block body %}
+	<form method="post">
+		{% csrf_token %}
+		{{form}}
+		<input type="submit" value="Log In">
+	</form>
+	<a href="/register">sign up</a>
+{% endblock %}

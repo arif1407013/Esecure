@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flight</title>
+</head>
+<body>
+	<h1>FLIGHTS</h1>
+	<ul>
+		{% for fly in Flights %}
+		<li><a href="{% url 'flightt' fly.id %}">{{fly}}</a></li>
+		{% endfor %}
+	</ul>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'register/base.html' %}
+{% block title %}
+	SIGN IN
+{% endblock %}
+{% block head %}
+	<h1>Sign In Page</h1>
+{% endblock %}
+{% block body %}
+	<form method="post">
+		{% csrf_token %}
+		{% for field in form %}
+			<div>
+				{{field.label_tag}}
+				<br>{{field}}</br>
+				{% if field.help_text %}
+				<h5>{{field.help_text}}</h5>
+				{% endif %}
+				{% for error in field.errors %}
+				<h5>{{error}}</h5>
+				{% endfor %}
+			</div>
+		{% endfor %}
+		<input type="submit" value="Sign In">
+	</form>
+{% endblock %}
