@@ -1,0 +1,52 @@
+.gameContent{
+    float: left;
+    clear: both;
+    display: flex;
+    width: 100%;
+    height: 560px;
+    background-color: white;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+.perRow{
+    align-self: stretch;
+    background-color: white;
+    height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.btn{
+    justify-self: stretch;
+    align-self: stretch;
+    align-content: stretch;
+    width: 55px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.selected1{
+    background-color: rgba(50,150,255,.7);
+}
+.selected2{
+    background-color: rgba(100,255,50,.7);
+}
+.notSelected{
+    background-color: rgba(255,255,255,.7);
+}
+.textfield{
+    width: 100%;
+    color: rgba(255,100,50,1);
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+.result{
+    font-size: 60px;
+    height: 560px;
+    float: left;
+}
+.butan{
+    top: 500%;
+}

@@ -1,0 +1,14 @@
+<div class="textfield">
+    <div class="textfield">Playground for {{username}}</div>
+    <div class="gameContent" *ngIf="winner == null">
+        <div class="perRow" *ngFor="let rc of rowCount; index as rInd">
+            <button [disabled]="false" [ngClass]="{'selected1':(arrs[rc][cc].value==true && arrs[rc][cc].user==1),
+                                'selected2':(arrs[rc][cc].value==true && arrs[rc][cc].user==2)}" class="btn" *ngFor="let cc of columnCount; index as cInd" 
+                                (click)="boxClick(rInd, cInd)"></button>
+        </div>
+    </div>
+    <div class="result textfield" *ngIf="winner != null">
+        <div>The winner is player {{winner}}</div>
+        <button (click)="winner=null;assignerInArrs();">BACK</button>
+    </div>
+</div>

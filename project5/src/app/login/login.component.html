@@ -1,0 +1,29 @@
+<div class="maindisp">
+    <mat-card>
+        <form [formGroup]="loginForm" style="display: flex;flex-flow: column wrap;" (submit)="plslog()">
+            <div class="inputs" matBadge="?" matBadgeColor="warn" [matBadgeHidden]="loginForm.controls.Name.valid">
+                <mat-form-field appearance="fill">
+                    <mat-label>Username Input</mat-label>
+                    <input matInput name="Name" placeholder="Username" formControlName="Name">
+                    <mat-hint *ngIf="loginForm.controls.Name.touched || loginForm.controls.Name.dirty">
+                        <p *ngIf="loginForm.controls.Name.errors?.required">user name required</p>
+                        <p *ngIf="loginForm.controls.Name.errors?.minlength">any username is at least 4 letters</p>
+                    </mat-hint>
+                </mat-form-field>
+            </div>
+            <div class="inputs" matBadge="?" matBadgeColor="warn" [matBadgeHidden]="loginForm.controls.Password.valid">
+                <mat-form-field appearance="fill">
+                    <mat-label>Password Input</mat-label>
+                    <input matInput name="Password" formControlName="Password" placeholder="Password"/>
+                    <mat-hint *ngIf="loginForm.controls.Password.touched || loginForm.controls.Password.dirty">
+                        <p *ngIf="loginForm.controls.Password.errors?.required">user password required</p>
+                        <p *ngIf="loginForm.controls.Password.errors?.minlength">all passwords are at least 6 characters long</p>
+                    </mat-hint>
+                </mat-form-field>
+            </div>
+            <div class="inputs">
+                <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">LogIn</button>
+            </div>
+        </form>
+    </mat-card>
+</div>

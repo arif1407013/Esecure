@@ -1,0 +1,15 @@
+.inputs{
+    align-self: center;
+    width: 70%;
+    float: left;
+    clear: both;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    background-color: rgba(255, 150, 150, .5);
+}
+.maindisp{
+    width: 90%;
+    margin: 5%;
+    float: left;
+}
