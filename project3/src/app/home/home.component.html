@@ -1,0 +1,9 @@
+<div class="mainCont">
+    <div class="headeR">
+        Welcome to Chat App
+    </div>
+    <div class="bodY">
+        <button class="addD enabB" routerLink="/login">Log In</button>
+        <button class="addD" routerLink="/signup" [disabled]="disCheck()" [ngClass]="(disCheck())?'disAb':'enabB'">Sign Up</button>
+    </div>
+</div>
